@@ -13,7 +13,10 @@ const server = new ApolloServer({
 const PORT = 4466;
 const app = express();
 
-server.applyMiddleware({ app }); // app is from an existing express app
+server.applyMiddleware({ 
+  app, 
+  cors: { origin: 'http://localhost:3000' } 
+}); // app is from an existing express app
 
 app.listen({ port: PORT }, () =>
   console.log(`🚀 Server ready at http://localhost:${PORT}${server.graphqlPath}`)
