@@ -2,8 +2,10 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "start": "node_modules/.bin/babel-node server.js",
+    "start-nodemon": "nodemon --delay 5 --inspect=0.0.0.0:9229 ./server.js --exec babel-node -e js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -17,6 +19,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-3": "^6.24.1"
+    "babel-preset-stage-3": "^6.24.1",
+    "nodemon": "^1.18.8"
   }
 }
