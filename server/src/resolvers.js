@@ -54,7 +54,7 @@ const resolvers = {
       channels.remById(id);
       return 1;
     },
-    addAttendee: (root, {data}) => {
+    createAttendee: (root, {data}) => {
       const newAttendee = { id: nextAttendeesId++, name: data.name, age: data.age, location: data.location };
       attendees.push(newAttendee);
       return newAttendee;

@@ -15,9 +15,7 @@ const QUERY = gql`
 
 const MUTATION = gql`
     mutation deleteAttendee($id: ID!) {
-        deleteAttendee(where: { id: $id }) {
-            id
-        }
+        deleteAttendee( id: $id )
     }
 `;
 
@@ -56,7 +54,7 @@ export default () => (
                                         onClick={() =>
                                             deleteAttendee({
                                                 variables: {
-                                                    id: attendee.id
+                                                    id: attendee.id.toString()
                                                 }
                                             })
                                         }

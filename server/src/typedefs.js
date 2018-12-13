@@ -32,7 +32,7 @@ type Mutation {
   addChannel(name: String!): Channel
   deleteChannel(id: ID!): Int!
   
-  addAttendee(data: AttendeeInput!): Attendee
+  createAttendee(data: AttendeeInput!): Attendee
   deleteAttendee(id: ID!): Int!
 }
 `;
